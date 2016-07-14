@@ -6,7 +6,7 @@
 
 To be able to use this component you should install it first
 ```bash
-npm install probil/vue-product-carousel
+npm i --save https://github.com/probil/vue-product-carousel.git
 ```
 Then import it:
 ```js

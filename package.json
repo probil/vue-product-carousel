@@ -1,13 +1,17 @@
 {
-  "name": "vue-product-slider",
-  "version": "0.1",
+  "name": "vue-product-carousel",
+  "version": "0.1.0",
   "description": "Simple slider on Vue.js with hot image replacement, Zoom and Swipe mode",
   "author": "Max Lyashuk <m_lyashuk@ukr.net>",
-  "private": true,
+  "private": false,
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/probil/vue-product-carousel.git"
   },
   "dependencies": {
     "vue": "^1.0.0",
@@ -30,5 +34,11 @@
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"
-  }
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/probil/vue-product-carousel/blob/master/LICENSE"
+    }
+  ]
 }

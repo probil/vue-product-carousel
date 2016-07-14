@@ -1,1 +1,1 @@
-export * from 'src/carousel.vue';
+module.exports = require('./src/carousel.vue');
