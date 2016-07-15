@@ -6,13 +6,15 @@
 
 To be able to use this component you should install it first
 ```bash
-npm i --save https://github.com/probil/vue-product-carousel.git
+npm i --save vue-product-carousel
 ```
 Then import it:
 ```js
 import carousel from 'vue-product-carousel'
 ```
-And use in your code use `carousel` component and pass your images as `images` prop:
+
+Use `carousel` component and pass your images as `images` prop:
+
 ```js
 <template>
   <carousel :images="images">
@@ -34,7 +36,7 @@ components:{
 </script>
 ...
 ```
-Note: You will need (Babel Loader)[https://github.com/babel/babel-loader] in your Webpack config file in order to support ES6 syntax inside component.
+Note: You will need [Babel Loader](https://github.com/babel/babel-loader) in your Webpack config file in order to support ES6 syntax inside component.
 
 ## Testing
 
@@ -50,3 +52,8 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Credits
+
+- [kalicki](https://github.com/kalicki) for idea.
+- [thebird](https://github.com/thebird/Swipe) for [Swipe](https://github.com/thebird/Swipe) lib
