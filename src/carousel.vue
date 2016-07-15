@@ -33,7 +33,7 @@
         <a v-for="image in images"
            @click.prevent="onSlideClick($index)"
            :class="{'selected': $index === next}"
-           href="#" class="btn btn-swipe"
+           href="#" class="btn-swipe"
         >{{$index}}</a>
       </div>
       <!-- /Swipe dots (for mobile) -->
