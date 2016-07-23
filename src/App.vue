@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <carousel :images="images">
+    <carousel :images="images" :hide-on-zoom="'.hideOnZoom'">
       <div class="block-inside">
         <div class="block-title">
           <h1>Content title</h1>

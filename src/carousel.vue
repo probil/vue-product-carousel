@@ -58,6 +58,11 @@ export default {
       type    : Array,
       required: true,
       default : []
+    },
+    hideOnZoom: {
+      type     : String,
+      required : false,
+      'default': ''
     }
   },
   data(){
@@ -103,6 +108,15 @@ export default {
      */
     toggleZoom(){
       this.isZoomed = !this.isZoomed;
+
+      // hide desired elements
+      if(this.hideOnZoom) {
+        document
+          .querySelectorAll(this.hideOnZoom)
+          .forEach(elem => {
+            elem.style.display = this.isZoomed ? 'none' : ''
+          })
+      }
     },
 
     /**
