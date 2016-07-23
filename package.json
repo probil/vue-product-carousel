@@ -1,6 +1,6 @@
 {
   "name": "vue-product-carousel",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple slider on Vue.js with hot image replacement, Zoom and Swipe mode",
   "author": "Max Lyashuk <m_lyashuk@ukr.net>",
   "private": false,
