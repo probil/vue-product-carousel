@@ -1,5 +1,5 @@
 <template>
-  <div class="product-template" :class="{'zoomed':isZoomed}">
+  <div class="vue-product-carousel" :class="{'zoomed':isZoomed}">
     <div class="block-image">
 
       <!-- Main image -->
@@ -218,7 +218,7 @@ export default {
 }
 </script>
 <style>
-  .product-template {
+  .vue-product-carousel {
     position: absolute;
     left: 0;
     right: 0;
@@ -226,15 +226,15 @@ export default {
     transform: translate3d(0px, 0px, 0px);
     background-color: #F3F3F3;
     overflow: hidden;  }
-  .product-template .block-image {
+  .vue-product-carousel .block-image {
     position: absolute;
     right: 33.3%;
     left: 0;
     height: 100%;
     transition: right 0.3s ease-in-out; }
-  .product-template .block-image .swipe-dots {
+  .vue-product-carousel .block-image .swipe-dots {
     display: none; }
-  .product-template .block-image .main-image {
+  .vue-product-carousel .block-image .main-image {
     display: block;
     position: absolute;
     left: 0;
@@ -245,22 +245,22 @@ export default {
     background-size: cover;
     cursor: url(img/cursor-zoom-plus.png) 22 22, auto;
     transition: opacity 0.4s ease-out;  }
-  .product-template .block-image .main-image.background-loading {
+  .vue-product-carousel .block-image .main-image.background-loading {
     opacity: 0;  }
-  .product-template .block-image .block-image-carousel {
+  .vue-product-carousel .block-image .block-image-carousel {
     position: absolute;
     top: 0;
     left: 40px;
     overflow: visible;
     transform: translateX(0);
     transition: transform 0.3s ease-in-out; }
-  .product-template .block-image .block-image-carousel .swipe-wrap {
+  .vue-product-carousel .block-image .block-image-carousel .swipe-wrap {
     height: auto;
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%); }
-  .product-template .block-image .block-image-carousel a {
+  .vue-product-carousel .block-image .block-image-carousel a {
     display: block;
     width: 43px;
     height: 55px;
@@ -269,14 +269,14 @@ export default {
     background: no-repeat center center;
     background-size: cover;
     transition: opacity 0.4s ease-out; }
-  .product-template .block-image .block-image-carousel a.selected,
-  .product-template .block-image .block-image-carousel a:hover {
+  .vue-product-carousel .block-image .block-image-carousel a.selected,
+  .vue-product-carousel .block-image .block-image-carousel a:hover {
     opacity: 1; }
-  .product-template .block-image .block-image-carousel:last-child a {
+  .vue-product-carousel .block-image .block-image-carousel:last-child a {
     margin-bottom: 0; }
-  .product-template .block-image .block-image-carousel a.background-loading {
+  .vue-product-carousel .block-image .block-image-carousel a.background-loading {
     opacity: 0; }
-  .product-template .block-details {
+  .vue-product-carousel .block-details {
     float: right;
     width: 33.33%;
     height: 100%;
@@ -285,66 +285,66 @@ export default {
     border-left: 1px solid #E1E1E1;
     transform: translateX(0);
     transition: transform 0.3s ease-in-out; }
-  .product-template.zoomed .block-image {
+  .vue-product-carousel.zoomed .block-image {
     right: 0 !important; }
-  .product-template.zoomed .block-image .main-image {
+  .vue-product-carousel.zoomed .block-image .main-image {
     cursor: url(img/cursor-close.png) 22 22, auto; }
-  .product-template.zoomed .block-image .block-image-carousel{
+  .vue-product-carousel.zoomed .block-image .block-image-carousel{
     -moz-transform: translateX(-500px);
     -ms-transform: translateX(-500px);
     -webkit-transform: translateX(-500px);
     transform: translateX(-500px); }
-  .product-template.zoomed .block-details {
+  .vue-product-carousel.zoomed .block-details {
     transform: translateX(100%); }
 
-  .swipe, .swipe-wrap {
+  .vue-product-carousel .swipe, .swipe-wrap {
     visibility: visible;
     height: 100%;  }
-  .swipe-wrap > div {
+  .vue-product-carousel .swipe-wrap > div {
     float: left;
     width: 100%;
     position: relative;  }
 
   @media screen and (max-width: 1279px) {
-    .product-template .block-image {
+    .vue-product-carousel .block-image {
       right: 33.33%; }
-    .product-template .block-details {
+    .vue-product-carousel .block-details {
       width: 33.33%; } }
   @media screen and (max-width: 1023px) {
-    .product-template {
+    .vue-product-carousel {
       position: static;
       left: 0;
       right: 0;
       height: auto;
       transform: none; }
-    .product-template .block-image {
+    .vue-product-carousel .block-image {
       position: static;
       right: 0;
       height: 650px;
       background: #fff; }
-    .product-template .block-image .main-image{
+    .vue-product-carousel .block-image .main-image{
       display: none; }
-    .product-template .block-image .block-image-carousel {
+    .vue-product-carousel .block-image .block-image-carousel {
       overflow: hidden;
       position: relative;
       top: auto;
       left: auto;
       width: 100%;
       height: 583px; }
-    .product-template .block-image .block-image-carousel .swipe-wrap {
+    .vue-product-carousel .block-image .block-image-carousel .swipe-wrap {
       position: relative;
       top: auto;
       left: auto;
       transform: none;
       height: 100%;
       width: 100%; }
-    .product-template .block-image .block-image-carousel .swipe-wrap > div {
+    .vue-product-carousel .block-image .block-image-carousel .swipe-wrap > div {
       height: 100%; }
-    .product-template .block-image .block-image-carousel a {
+    .vue-product-carousel .block-image .block-image-carousel a {
       width: 100%;
       height: 100%;
       opacity: 1; }
-    .product-template .block-image .swipe-dots {
+    .vue-product-carousel .block-image .swipe-dots {
       display: block;
       padding: 25px 0;
       margin: 0 80px;
@@ -352,7 +352,7 @@ export default {
       z-index: 10;
       text-align: center;
       border-bottom: 1px solid #E1E1E1; }
-    .product-template .block-image .swipe-dots .btn-swipe {
+    .vue-product-carousel .block-image .swipe-dots .btn-swipe {
       display: inline-block;
       text-indent: -5000px;
       overflow: hidden;
@@ -361,10 +361,10 @@ export default {
       border-radius: 10px;
       border: 1px solid #1e2226;
       margin: 0 2px; }
-    .product-template .block-image .swipe-dots .btn-swipe.selected,
-    .product-template .block-image .swipe-dots .btn-swipe:hover {
+    .vue-product-carousel .block-image .swipe-dots .btn-swipe.selected,
+    .vue-product-carousel .block-image .swipe-dots .btn-swipe:hover {
       background: #1e2226; }
-    .product-template .block-details {
+    .vue-product-carousel .block-details {
       position: static;
       left: 0;
       top: 0;
@@ -372,7 +372,7 @@ export default {
 
   }
   @media screen and (max-width: 640px) {
-    .product-template .block-image .swipe-dots {
+    .vue-product-carousel .block-image .swipe-dots {
       margin: 0 25px; }
   }
 </style>
