@@ -53,6 +53,13 @@ npm run build
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+## Params
+
+|  Name                | Type   | Default  | Required | Description  |
+|  ---               | ---   | ---     | ---      | ---         |
+|  `images`            | Array  | []       | `true`    | Array of image urls that will be used in slider |
+| `body-class-on-zoom` | String | `zoom`   | `false`   | Class that will be added to the `body` while Zoom mode is active. Very useful to hide header/footer in Zoom mode. |
+
 ## Credits
 
 - [kalicki](https://github.com/kalicki) for idea.
