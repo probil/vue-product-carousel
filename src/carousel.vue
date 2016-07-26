@@ -55,14 +55,14 @@ export default {
   swipe: null,
   props: {
     images: {
-      type    : Array,
-      required: true,
-      default : []
+      type     : Array,
+      required : true,
+      'default': []
     },
-    hideOnZoom: {
+    bodyClassOnZoom: {
       type     : String,
       required : false,
-      'default': ''
+      'default': 'zoom'
     }
   },
   data(){
@@ -104,19 +104,28 @@ export default {
   },
   methods: {
     /**
+     * Adds or removes body class based on zoom mode
+     */
+    updateBodyClass(){
+      // don't do anything if not class defined
+      if(!this.bodyClassOnZoom) return;
+
+      let body = document.querySelector('body');
+
+      this.isZoomed
+        ? body.classList.add(this.bodyClassOnZoom)
+        : body.classList.remove(this.bodyClassOnZoom)
+    },
+
+
+    /**
      * Toggles Zoom mode
      */
     toggleZoom(){
       this.isZoomed = !this.isZoomed;
 
-      // hide desired elements
-      if(this.hideOnZoom) {
-        document
-          .querySelectorAll(this.hideOnZoom)
-          .forEach(elem => {
-            elem.style.display = this.isZoomed ? 'none' : ''
-          })
-      }
+      // add class to body if needed
+      this.updateBodyClass();
     },
 
     /**
