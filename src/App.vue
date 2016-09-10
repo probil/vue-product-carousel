@@ -26,10 +26,11 @@ export default {
     return {
       new_image: '',
       images: [
-        'https://d3403zlz7k7n0t.cloudfront.net/1700/1000/1455627904-edwin-national-sweat-navy-landscape-1.jpg',
-        'https://d3403zlz7k7n0t.cloudfront.net/1700/700/1455627925-edwin-national-sweat-navy-landscape-2.jpg',
-        'https://d3403zlz7k7n0t.cloudfront.net/1700/700/1455627957-edwin-national-sweat-navy-landscape-3.jpg',
-        'https://d3403zlz7k7n0t.cloudfront.net/1700/700/1455627980-edwin-national-sweat-navy-landscape-4.jpg'
+        'http://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_2588/v1473457888/pexels-photo-168766_zrbvds.jpg',
+        'http://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_2588/v1473457886/pexels-photo_f5vx33.jpg',
+        'http://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_2588/v1473457886/person-smartphone-office-table_ttiwjx.jpg',
+        'http://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_2588/v1473457885/person-hand-smartphone-technology_w0bgpf.jpg',
+        'http://res.cloudinary.com/dxn1bjdta/image/upload/v1473457881/pexels-photo-89955_ifoijg.jpg'
       ]
     }
   },
