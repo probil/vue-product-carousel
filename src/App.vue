@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <carousel :images="images" :hide-on-zoom="'.hideOnZoom'">
       <div class="block-inside">
         <div class="block-title">
@@ -37,6 +37,7 @@ export default {
   methods: {
     addNewImage(){
       if(this.new_image.trim().length === 0) return;
+
       this.images.push(this.new_image);
       this.new_image = '';
     }

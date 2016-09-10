@@ -7,18 +7,18 @@
          @click="toggleZoom"
          @mousemove="onMouseMove"
          :class="{'background-loading':bgLoading}"
-         :style="[currentZoomStyle, bgi(currentSlide)]"
+         :style="mainImageStyle"
       ></a>
       <!-- /Main image -->
 
       <!-- Slides preview -->
-      <div id="product-slider" class="block-image-carousel swipe" v-el:swipe-wrap>
+      <div id="product-slider" class="block-image-carousel swipe" ref="swipe-wrap">
         <div class="swipe-wrap">
-          <div v-for="image in images">
-            <a @click.prevent="onSlideClick($index)"
+          <div v-for="(image, index) in images">
+            <a @click.prevent="onSlideClick(index)"
                :style="bgi(image)"
                :class="{
-                  'selected'          : $index === next,
+                  'selected'          : index === next,
                   'background-loading': itemsBgLoading
                  }"
                href="#" class="swipe-thumbnail"
@@ -30,11 +30,11 @@
 
       <!-- Swipe dots (for mobile) -->
       <div class="swipe-dots">
-        <a v-for="image in images"
-           @click.prevent="onSlideClick($index)"
-           :class="{'selected': $index === next}"
+        <a v-for="(image, index) in images"
+           @click.prevent="onSlideClick(index)"
+           :class="{'selected': index === next}"
            href="#" class="btn-swipe"
-        >{{$index}}</a>
+        >{{index}}</a>
       </div>
       <!-- /Swipe dots (for mobile) -->
 
@@ -100,6 +100,13 @@ export default {
       return {
         backgroundPosition: `50% ${this.positionY}%`
       }
+    },
+
+    /**
+     * Computed styles of main image
+     */
+    mainImageStyle(){
+      return Object.assign({}, this.currentZoomStyle, this.bgi(this.currentSlide));
     }
   },
   methods: {
@@ -209,7 +216,7 @@ export default {
       if (window.innerWidth > 1024) return;
 
       // use Swipe lib and save instance to $options
-      this.$options.swipe = new Swipe(this.$els.swipeWrap, {
+      this.$options.swipe = new Swipe(this.$refs.swipeWrap, {
         speed          : 400,
         continuous     : true,
         disableScroll  : false,
@@ -233,7 +240,7 @@ export default {
   /**
    * Fires on component ready state
    */
-  ready(){
+  mounted(){
     this.smoothChange();
     this.smoothChangeItems();
     this.activateSwipe();
