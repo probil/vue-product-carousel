@@ -4,10 +4,11 @@
   "description": "Simple slider on Vue.js with hot image replacement, Zoom and Swipe mode",
   "author": "Max Lyashuk <m_lyashuk@ukr.net>",
   "private": false,
-  "main": "index.js",
+  "main": "dist/carousel.min.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "dev": "webpack-dev-server --inline --hot --config build/webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.config.js",
+    "build:dist": "cross-env NODE_ENV=production webpack --config build/webpack.bundle.js"
   },
   "repository": {
     "type": "git",
