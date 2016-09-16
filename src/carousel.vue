@@ -12,7 +12,7 @@
       <!-- /Main image -->
 
       <!-- Slides preview -->
-      <div id="product-slider" class="block-image-carousel swipe" ref="swipe-wrap">
+      <div id="product-slider" class="block-image-carousel swipe" ref="swipeWrap">
         <div class="swipe-wrap">
           <div v-for="(image, index) in images">
             <a @click.prevent="onSlideClick(index)"
