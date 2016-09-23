@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <carousel :images="images" :hide-on-zoom="'.hideOnZoom'">
+    <carousel :images="images">
       <div class="block-inside">
         <div class="block-title">
           <h1>Content title</h1>
@@ -9,7 +9,7 @@
       </div>
       <hr>
       <p>Hot image add test:</p>
-      <input v-model="new_image" type="text" placeholder="Add image url here..." style="width: 90%">
+      <input v-model="new_image" type="text" placeholder="Add image url here..." class="newImage">
       <br>
       <button @click="addNewImage">Add</button>
     </carousel>
@@ -18,6 +18,7 @@
 
 <script>
 import carousel from '../dist/vue-product-carousel.min.js';
+
 export default {
   components:{
     carousel
@@ -43,16 +44,4 @@ export default {
   }
 }
 </script>
-<style>
-  body, html{
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-  #app{
-    position: relative;
-    min-height: 100%;
-  }
-</style>
+<style src="./style.css"></style>
