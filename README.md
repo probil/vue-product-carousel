@@ -18,6 +18,7 @@ Use `carousel` component and pass your images as `images` prop:
 ```js
 <template>
   <carousel :images="images">
+    Sidebar content here
   </carousel>
 </template>
 <script>
@@ -44,11 +45,14 @@ Note: You will need [Babel Loader](https://github.com/babel/babel-loader) in you
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve demo with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
+# build demo for static using
 npm run build
+
+# build library bundle (to use as module)
+npm run dist
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
