@@ -6,8 +6,9 @@
   "private": false,
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "dev": "webpack-dev-server --inline --hot --config build/webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.config.js",
+    "dist": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/dist.js"
   },
   "repository": {
     "type": "git",
