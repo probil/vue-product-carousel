@@ -1,10 +1,10 @@
 <template>
   <div>
-    <carousel :images="images" :hide-on-zoom="'.hideOnZoom'">
-      <div class="block-inside">
-        <div class="block-title">
-          <h1>Content title</h1>
-          <h2>Something else</h2>
+    <carousel :images="images">
+      <div class="container">
+        <div class="row">
+          <h2>vue-product-carousel</h2>
+          <h4>Simple slider on Vue.js with hot image replacement, Zoom and Swipe mod</h4>
         </div>
       </div>
       <hr>
@@ -44,16 +44,3 @@ export default {
   }
 }
 </script>
-<style>
-  body, html{
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-  #app{
-    position: relative;
-    min-height: 100%;
-  }
-</style>

@@ -4,28 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>slider</title>
-    <style>
-      .footer {
-        width: 100%;
-        height: 50px;
-        background-color: mediumpurple;
-        transition: all 1s ease;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        opacity: 1;
-      }
-      body.zoom .footer{
-        height: 0;
-        opacity: 0;
-      }
-    </style>
+    <link rel="stylesheet" href="demo/style.css">
   </head>
   <body>
     <div id="app"></div>
     <div class="footer">
       Footer. Will be hidden on zoom
     </div>
+
     <script src="dist/build.js"></script>
   </body>
 </html>
