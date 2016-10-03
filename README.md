@@ -2,6 +2,8 @@
 
 > Product carousel ported to Vue.js with hot image replacement, Zoom and Swipe mode
 
+[Online Demo](https://cdn.rawgit.com/probil/vue-product-carousel/vue-2.0/index.html)
+
 ## Usage
 
 To be able to use this component you should install it first
