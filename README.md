@@ -61,6 +61,8 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 |  ---               | ---   | ---     | ---      | ---         |
 |  `images`            | Array  | []       | `true`    | Array of image urls that will be used in slider |
 | `body-class-on-zoom` | String | `zoom`   | `false`   | Class that will be added to the `body` while Zoom mode is active. Very useful to hide header/footer in Zoom mode. |
+|`width-block-image` | String | `70%`   | `false`   | Handles the `min/max-width` of the class`block-image` |
+|`width-block-details` | String | `30%`   | `false`   | Handles the `min/max-width` of the class `block-details` |
 
 ## Credits
 

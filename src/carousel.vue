@@ -1,6 +1,6 @@
 <template>
   <div class="vue-product-carousel" :class="{'zoomed':isZoomed}">
-    <div class="block-image">
+    <div class="block-image" :style="{'min-width': widthBlockImage, 'max-width': widthBlockImage}">
 
       <!-- Main image -->
       <a href="#" class="main-image responsive-image"
@@ -39,7 +39,7 @@
       <!-- /Swipe dots (for mobile) -->
 
     </div>
-    <div class="block-details">
+    <div class="block-details" :style="{'min-width': widthBlockDetails, 'max-width': widthBlockDetails}">
 
       <!-- Main text content -->
       <slot></slot>
@@ -63,7 +63,17 @@ export default {
       type     : String,
       required : false,
       'default': 'zoom'
-    }
+    },
+    widthBlockImage: {
+      type     : String,
+      required : false,
+      'default': '70%'
+    },
+    widthBlockDetails: {
+      type     : String,
+      required : false,
+      'default': '30%'
+    },
   },
   data(){
     return {
@@ -258,10 +268,10 @@ export default {
     overflow: hidden;  }
   .vue-product-carousel .block-image {
     position: absolute;
-    right: 33.3%;
+    right: 0;
     left: 0;
     height: 100%;
-    transition: right 0.3s ease-in-out; }
+    transition: max-width 0.3s ease-in-out; }
   .vue-product-carousel .block-image .swipe-dots {
     display: none; }
   .vue-product-carousel .block-image .main-image {
@@ -308,7 +318,6 @@ export default {
     opacity: 0; }
   .vue-product-carousel .block-details {
     float: right;
-    width: 33.33%;
     height: 100%;
     background: #fff;
     overflow-y: auto;
@@ -316,7 +325,7 @@ export default {
     transform: translateX(0);
     transition: transform 0.3s ease-in-out; }
   .vue-product-carousel.zoomed .block-image {
-    right: 0 !important; }
+    max-width: 100% !important;}
   .vue-product-carousel.zoomed .block-image .main-image {
     cursor: url(img/cursor-close.png) 22 22, auto; }
   .vue-product-carousel.zoomed .block-image .block-image-carousel{
@@ -335,11 +344,6 @@ export default {
     width: 100%;
     position: relative;  }
 
-  @media screen and (max-width: 1279px) {
-    .vue-product-carousel .block-image {
-      right: 33.33%; }
-    .vue-product-carousel .block-details {
-      width: 33.33%; } }
   @media screen and (max-width: 1023px) {
     .vue-product-carousel {
       position: static;
@@ -348,6 +352,7 @@ export default {
       height: auto;
       transform: none; }
     .vue-product-carousel .block-image {
+      max-width: 100% !important;
       position: static;
       right: 0;
       height: 650px;
@@ -395,6 +400,7 @@ export default {
     .vue-product-carousel .block-image .swipe-dots .btn-swipe:hover {
       background: #1e2226; }
     .vue-product-carousel .block-details {
+      max-width: 100% !important;
       position: static;
       left: 0;
       top: 0;
