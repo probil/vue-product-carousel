@@ -24,7 +24,7 @@ jobs:
 
       - run:
           name: Install dependencies
-          command: npm i
+          command: yarn
 
       - save_cache:
           paths:
@@ -32,7 +32,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # catch build-time errors (if any)
-      - run: npm run build:lib
+      - run: yarn build:lib
 
       - store_artifacts:
           path: ./dist/lib/VueProductCarousel.umd.min.js
@@ -44,7 +44,7 @@ jobs:
 
       - run:
           name: Run code-style check
-          command: npm run lint -- --format junit -o /tmp/test-results/code-style-test-results.xml
+          command: yarn lint --format junit -o /tmp/test-results/code-style-test-results.xml
 
       - store_test_results:
           path: /tmp/test-results
