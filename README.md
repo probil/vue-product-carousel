@@ -1,6 +1,6 @@
 # vue-product-carousel
 
-> Product carousel ported to Vue.js with hot image replacement, Zoom and Swipe mode
+> Simple product carousel with hot image replacement, Zoom and Swipe mode
 
 ## Usage
 
