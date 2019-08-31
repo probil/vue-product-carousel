@@ -49,46 +49,46 @@
   </div>
 </template>
 <script>
-import Swipe from '../vendor/swipe'
+import Swipe from '../vendor/swipe';
 
 export default {
   swipe: null,
   props: {
     images: {
-      type     : Array,
-      required : true,
-      'default': []
+      type: Array,
+      required: true,
+      default: [],
     },
     bodyClassOnZoom: {
-      type     : String,
-      required : false,
-      'default': 'zoom'
-    }
+      type: String,
+      required: false,
+      default: 'zoom',
+    },
   },
-  data(){
+  data() {
     return {
       // is Zoom mode active
-      isZoomed      : false,
+      isZoomed: false,
       // background position in Zoom mode
-      positionY     : 50,
+      positionY: 50,
       // current slide id
-      current       : 0,
+      current: 0,
       // next slide id
-      next          : 0,
+      next: 0,
       // main image loading status
-      bgLoading     : true,
+      bgLoading: true,
       // image pagination loading status
       itemsBgLoading: true,
       // is Swipe mode active
-      swipeActive   : false
-    }
+      swipeActive: false,
+    };
   },
-  computed:{
+  computed: {
     /**
      * Computed current slide image
      * @returns {?String}
      */
-    currentSlide(){
+    currentSlide() {
       return this.images[this.current];
     },
 
@@ -96,39 +96,39 @@ export default {
      * Computed zoom style for zoom mode
      * @returns {{backgroundPosition: string}}
      */
-    currentZoomStyle(){
+    currentZoomStyle() {
       return {
-        backgroundPosition: `50% ${this.positionY}%`
-      }
+        backgroundPosition: `50% ${this.positionY}%`,
+      };
     },
 
     /**
      * Computed styles of main image
      */
-    mainImageStyle(){
+    mainImageStyle() {
       return Object.assign({}, this.currentZoomStyle, this.bgi(this.currentSlide));
-    }
+    },
   },
   methods: {
     /**
      * Adds or removes body class based on zoom mode
      */
-    updateBodyClass(){
+    updateBodyClass() {
       // don't do anything if not class defined
-      if(!this.bodyClassOnZoom) return;
+      if (!this.bodyClassOnZoom) return;
 
-      let body = document.querySelector('body');
+      const body = document.querySelector('body');
 
       this.isZoomed
         ? body.classList.add(this.bodyClassOnZoom)
-        : body.classList.remove(this.bodyClassOnZoom)
+        : body.classList.remove(this.bodyClassOnZoom);
     },
 
 
     /**
      * Toggles Zoom mode
      */
-    toggleZoom(){
+    toggleZoom() {
       this.isZoomed = !this.isZoomed;
 
       // add class to body if needed
@@ -146,18 +146,18 @@ export default {
     /**
      * Fires on mouse move in Zoom mode
      */
-    onMouseMove(e){
+    onMouseMove(e) {
       // prevent to call in non-zoom mode
-      if(!this.isZoomed) return;
+      if (!this.isZoomed) return;
 
-      this.positionY = this.map( e.clientY, 0, window.innerHeight, 0, 100 );
+      this.positionY = this.map(e.clientY, 0, window.innerHeight, 0, 100);
     },
 
     /**
      * Fires on slide change in Swipe mode
      * @param {Number} index Changed slide index
      */
-    onSwipe(index){
+    onSwipe(index) {
       this.next = index;
       this.smoothChange();
     },
@@ -165,24 +165,24 @@ export default {
     /**
      * Shortcut for Background Image in css
      */
-    bgi(url){
+    bgi(url) {
       return {
-        backgroundImage: `url('${url}')`
-      }
+        backgroundImage: `url('${url}')`,
+      };
     },
 
     /**
      * Fires on next slide click
      */
-    onSlideClick(index){
+    onSlideClick(index) {
       // prevent change if slide already correct
-      if(this.current === index || this.next === index) return;
+      if (this.current === index || this.next === index) return;
 
       this.next = index;
       this.smoothChange();
 
       // call slide in swipe mode (if needed)
-      if(this.swipeActive) {
+      if (this.swipeActive) {
         this.$options.swipe.slide(index, 400);
       }
     },
@@ -190,62 +190,62 @@ export default {
     /**
      * Makes smooth change for current slide
      */
-    smoothChange(){
+    smoothChange() {
       this.bgLoading = true;
       setTimeout(() => {
         this.current = this.next;
-        this.bgLoading = false
-      }, 400)
+        this.bgLoading = false;
+      }, 400);
     },
 
     /**
      * Makes smooth change for preview icons
      */
-    smoothChangeItems(){
+    smoothChangeItems() {
       this.itemsBgLoading = true;
       setTimeout(() => {
         this.itemsBgLoading = false;
-      }, 400)
+      }, 400);
     },
 
     /**
      * Activates Swipe mode (if possible)
      */
-    activateSwipe(){
+    activateSwipe() {
       // prevent Swipe mode on big screens
       if (window.innerWidth > 1024) return;
 
       // use Swipe lib and save instance to $options
       this.$options.swipe = new Swipe(this.$refs.swipeWrap, {
-        speed          : 400,
-        continuous     : true,
-        disableScroll  : false,
+        speed: 400,
+        continuous: true,
+        disableScroll: false,
         stopPropagation: false,
-        callback       : this.onSwipe
+        callback: this.onSwipe,
       });
       this.swipeActive = true;
-    }
+    },
   },
   watch: {
-    isZoomed(status){
+    isZoomed(status) {
       // if zoom disabled -> move background back to center
-      if(!status) { this.positionY = 50;}
+      if (!status) { this.positionY = 50; }
     },
-    images(){
+    images() {
       // on images change -> gracefully move to the first slide
       this.onSlideClick(0);
-    }
+    },
   },
 
   /**
    * Fires on component ready state
    */
-  mounted(){
+  mounted() {
     this.smoothChange();
     this.smoothChangeItems();
     this.activateSwipe();
-  }
-}
+  },
+};
 </script>
 <style>
   .vue-product-carousel {
