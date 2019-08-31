@@ -14,7 +14,7 @@
       <!-- Slides preview -->
       <div id="product-slider" class="block-image-carousel swipe" ref="swipeWrap">
         <div class="swipe-wrap">
-          <div v-for="(image, index) in images">
+          <div v-for="(image, index) in images" :key="index">
             <a @click.prevent="onSlideClick(index)"
                :style="bgi(image)"
                :class="{
@@ -30,7 +30,7 @@
 
       <!-- Swipe dots (for mobile) -->
       <div class="swipe-dots">
-        <a v-for="(image, index) in images"
+        <a v-for="(image, index) in images" :key="index"
            @click.prevent="onSlideClick(index)"
            :class="{'selected': index === next}"
            href="#" class="btn-swipe"
@@ -57,7 +57,7 @@ export default {
     images: {
       type: Array,
       required: true,
-      default: [],
+      default: () => [],
     },
     bodyClassOnZoom: {
       type: String,
@@ -119,9 +119,11 @@ export default {
 
       const body = document.querySelector('body');
 
-      this.isZoomed
-        ? body.classList.add(this.bodyClassOnZoom)
-        : body.classList.remove(this.bodyClassOnZoom);
+      if (this.isZoomed) {
+        body.classList.add(this.bodyClassOnZoom);
+      } else {
+        body.classList.remove(this.bodyClassOnZoom);
+      }
     },
 
 
