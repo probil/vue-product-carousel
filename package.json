@@ -6,8 +6,9 @@
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build:demo": "vue-cli-service build --dest dist/demo",
+    "build:lib": "vue-cli-service build --target lib --dest dist/lib --name VueProductCarousel 'src/components/ProductCarousel.vue'",
+    "lint": "npx eslint --ext .js,.vue src *.js"
   },
   "peerDependencies": {
     "vue": "~2"
