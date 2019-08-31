@@ -11,6 +11,13 @@
     "build:lib": "vue-cli-service build --target lib --dest dist/lib --name VueProductCarousel 'src/components/ProductCarousel.vue'",
     "lint": "npx eslint --ext .js,.vue src *.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/probil/vue-product-carousel.git"
+  },
+  "files": [
+    "dist/lib"
+  ],
   "peerDependencies": {
     "vue": "~2"
   },
