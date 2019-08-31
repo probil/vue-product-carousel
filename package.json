@@ -31,9 +31,9 @@
     "core-js": "2.6.9",
     "eslint": "5.16.0",
     "eslint-plugin-vue": "5.2.3",
+    "skeleton": "git://github.com/dhg/Skeleton.git",
     "vue": "2.6.10",
-    "vue-template-compiler": "2.6.10",
-    "skeleton": "git://github.com/dhg/Skeleton.git"
+    "vue-template-compiler": "2.6.10"
   },
   "licenses": [
     {
