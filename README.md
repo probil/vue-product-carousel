@@ -46,13 +46,13 @@ Note: You will need [Babel Loader](https://github.com/babel/babel-loader) in you
 npm install
 
 # serve demo with hot reload at localhost:8080
-npm run dev
+npm run serve
 
 # build demo for static using
 npm run build
 
-# build library bundle (to use as module)
-npm run dist
+# lints and fixes files
+npm run lint
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
