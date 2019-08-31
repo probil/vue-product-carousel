@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carousel :images="images">
+    <ProductCarousel :images="images">
       <div class="container section">
         <div class="row">
           <!-- Main title -->
@@ -37,7 +37,7 @@
 
         </div>
       </div>
-    </carousel>
+    </ProductCarousel>
 
     <div class="footer">
       <div class="container">
@@ -50,11 +50,11 @@
 </template>
 
 <script>
-import carousel from './components/carousel';
+import ProductCarousel from './components/ProductCarousel';
 
 export default {
   components: {
-    carousel,
+    ProductCarousel,
   },
   data() {
     return {
