@@ -1,4 +1,4 @@
-# vue-product-carousel
+# Vue Product Carousel
 
 > Simple product carousel with hot image replacement, Zoom and Swipe mode
 
@@ -13,49 +13,48 @@ Then import it:
 import ProductCarousel from 'vue-product-carousel'
 ```
 
-Use `carousel` component and pass your images as `images` prop:
+Use `ProductCarousel` component and pass your images as `images` prop:
 
-```js
+```vue
 <template>
   <ProductCarousel :images="images">
     Sidebar content here
   </ProductCarousel>
 </template>
 <script>
-...
-data(){
-  images:[
-    'http://lorempixel.com/1000/1000/business/1/',
-    'http://lorempixel.com/1000/1000/business/2/',
-    'http://lorempixel.com/1000/1000/business/3/'
-  ]
+export default {
+  components: {
+    ProductCarousel,
+  },
+  data() {
+    images: [
+      'http://lorempixel.com/1000/1000/business/1/',
+      'http://lorempixel.com/1000/1000/business/2/',
+      'http://lorempixel.com/1000/1000/business/3/',
+    ]
+  },
 }
-components:{
-  ProductCarousel,
-}
-...
 </script>
-...
 ```
-Note: You will need [Babel Loader](https://github.com/babel/babel-loader) in your Webpack config file in order to support ES6 syntax inside component.
 
-## Testing
+## Scripts
 
 ``` bash
-# install dependencies
+# installs dependencies
 npm install
 
-# serve demo with hot reload at localhost:8080
+# serves demo with hot reloading
 npm run serve
 
-# build demo for static using
-npm run build
+# builds demo
+npm run build:demo
+
+# builds lib
+npm run build:lib
 
 # lints and fixes files
 npm run lint
 ```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## Params
 
