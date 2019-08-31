@@ -13,12 +13,17 @@
           <h4>Hot image replacement:</h4>
 
           <!-- Removing -->
-          <div class="row" v-for="(image, index) in images">
+          <div class="row" v-for="(image, index) in images" :key="index">
             <div class="nine columns">
-              <input type="text" :value="image" readonly class="u-full-width">
+              <label>
+                <input type="text" :value="image" readonly class="u-full-width">
+              </label>
             </div>
             <div class="three columns">
-              <button @click="removeImage(index)" class="button u-full-width button-delete">X</button>
+              <button
+                @click="removeImage(index)"
+                class="button u-full-width button-delete"
+              >X</button>
             </div>
           </div>
           <!-- /Removing -->
@@ -26,10 +31,22 @@
           <!-- Adding -->
           <div class="row">
             <div class="nine columns">
-              <input v-model="new_image" type="text" placeholder="Add image url here..." class="u-full-width">
+              <label>
+                <input
+                  v-model="new_image"
+                  type="text"
+                  placeholder="Add image url here..."
+                  class="u-full-width"
+                />
+              </label>
             </div>
             <div class="three columns">
-              <button @click="addNewImage" class="button button-primary u-full-width button-add">Add</button>
+              <button
+                @click="addNewImage"
+                class="button button-primary u-full-width button-add"
+              >
+                Add
+              </button>
             </div>
           </div>
           <!-- /Adding -->
@@ -42,7 +59,8 @@
     <div class="footer">
       <div class="container">
         <p>
-          Footer. Will be hidden on zoom. Try to click on the main image to activate zoom mode &uarr;
+          Footer. Will be hidden on zoom.
+          Try to click on the main image to activate zoom mode &uarr;
         </p>
       </div>
     </div>
@@ -50,7 +68,7 @@
 </template>
 
 <script>
-import ProductCarousel from './components/ProductCarousel';
+import ProductCarousel from './components/ProductCarousel.vue';
 
 export default {
   components: {
