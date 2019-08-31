@@ -10,16 +10,16 @@ npm i --save vue-product-carousel
 ```
 Then import it:
 ```js
-import carousel from 'vue-product-carousel'
+import ProductCarousel from 'vue-product-carousel'
 ```
 
 Use `carousel` component and pass your images as `images` prop:
 
 ```js
 <template>
-  <carousel :images="images">
+  <ProductCarousel :images="images">
     Sidebar content here
-  </carousel>
+  </ProductCarousel>
 </template>
 <script>
 ...
@@ -31,7 +31,7 @@ data(){
   ]
 }
 components:{
-  carousel
+  ProductCarousel,
 }
 ...
 </script>
