@@ -4,6 +4,7 @@
   "description": "Simple slider on Vue.js with hot image replacement, Zoom and Swipe mode",
   "author": "Max Lyashuk <m_lyashuk@ukr.net>",
   "private": false,
+  "main": "dist/lib/VueProductCarousel.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build:demo": "vue-cli-service build --dest dist/demo",
