@@ -16,7 +16,7 @@
           <div class="row" v-for="(image, index) in images" :key="index">
             <div class="nine columns">
               <label>
-                <input type="text" :value="image" readonly class="u-full-width">
+                <input type="text" :value="image" readonly class="u-full-width label-body">
               </label>
             </div>
             <div class="three columns">
