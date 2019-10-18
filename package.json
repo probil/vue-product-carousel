@@ -1,6 +1,6 @@
 {
   "name": "vue-product-carousel",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple product carousel with hot image replacement, Zoom and Swipe mode",
   "author": "Max Lyashuk <m_lyashuk@ukr.net>",
   "private": false,
