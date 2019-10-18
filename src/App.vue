@@ -92,6 +92,9 @@ export default {
       this.images.push(this.new_image);
       this.new_image = '';
     },
+    removeImage(index) {
+      this.images.splice(index, 1);
+    },
   },
 };
 </script>
