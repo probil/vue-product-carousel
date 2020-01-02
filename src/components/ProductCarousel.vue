@@ -106,7 +106,7 @@ export default {
      * Computed styles of main image
      */
     mainImageStyle() {
-      return Object.assign({}, this.currentZoomStyle, this.bgi(this.currentSlide));
+      return { ...this.currentZoomStyle, ...this.bgi(this.currentSlide) };
     },
   },
   methods: {
