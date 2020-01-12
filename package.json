@@ -14,7 +14,7 @@
     "test:e2e": "start-server-and-test serve http-get://localhost:8080 testcafe:all",
     "test:e2e:ci": "start-server-and-test serve http-get://localhost:8080 testcafe:headless",
     "testcafe:all": "npx testcafe `npx testcafe -b | paste -sd \",\" -` tests/e2e/**",
-    "testcafe:headless": "testcafe chrome:headless tests/e2e/**"
+    "testcafe:headless": "testcafe chrome:headless tests/e2e/** -r xunit:/tmp/test-results/e2e-test-results.xml"
   },
   "repository": {
     "type": "git",
