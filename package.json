@@ -9,8 +9,12 @@
     "serve": "vue-cli-service serve",
     "build:demo": "vue-cli-service build --dest dist/demo",
     "build:lib": "vue-cli-service build --target lib --dest dist/lib --name VueProductCarousel 'src/components/ProductCarousel.vue'",
-    "lint": "npx eslint --ext .js,.vue src *.js",
-    "release": "bash scripts/release.sh"
+    "lint": "npx eslint --ext .js,.vue src tests *.js",
+    "release": "bash scripts/release.sh",
+    "test:e2e": "start-server-and-test serve http-get://localhost:8080 testcafe:all",
+    "test:e2e:ci": "start-server-and-test serve http-get://localhost:8080 testcafe:headless",
+    "testcafe:all": "npx testcafe `npx testcafe -b | paste -sd \",\" -` tests/e2e/**",
+    "testcafe:headless": "testcafe chrome:headless tests/e2e/** -r xunit:/tmp/test-results/e2e-test-results.xml"
   },
   "repository": {
     "type": "git",
@@ -30,8 +34,11 @@
     "babel-eslint": "10.0.3",
     "core-js": "3.6.3",
     "eslint": "6.8.0",
+    "eslint-plugin-testcafe": "^0.2.1",
     "eslint-plugin-vue": "6.1.2",
     "skeleton": "git://github.com/dhg/Skeleton.git",
+    "start-server-and-test": "^1.10.6",
+    "testcafe": "^1.7.1",
     "vue": "2.6.11",
     "vue-template-compiler": "2.6.11"
   },
