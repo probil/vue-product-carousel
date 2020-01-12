@@ -4351,7 +4351,7 @@ eslint-plugin-import@^2.18.2:
     read-pkg-up "^2.0.0"
     resolve "^1.12.0"
 
-eslint-plugin-testcafe@^0.2.1:
+eslint-plugin-testcafe@0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-testcafe/-/eslint-plugin-testcafe-0.2.1.tgz#4089f646dadb69b1376a01d7e608184907e6036b"
   integrity sha1-QIn2RtrbabE3agHX5ggYSQfmA2s=
@@ -9262,7 +9262,7 @@ stackframe@^1.0.4:
   resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-1.0.4.tgz#357b24a992f9427cba6b545d96a14ed2cbca187b"
   integrity sha512-to7oADIniaYwS3MhtCa/sQhrxidCCQiF/qp4/m5iN3ipf0Y7Xlri0f6eG29r08aL7JYl8n32AF3Q5GYBZ7K8vw==
 
-start-server-and-test@^1.10.6:
+start-server-and-test@1.10.6:
   version "1.10.6"
   resolved "https://registry.yarnpkg.com/start-server-and-test/-/start-server-and-test-1.10.6.tgz#43355173e49a165b0ce9e928733b574bb877379c"
   integrity sha512-Gr/TDePT4JczaoBiKZLZRIWmYgRcoGcFQePtPEHEvZFUuxbdUqTZozx8dqrlKl/67+pipg5OOtBH21U1oJXJIQ==
@@ -9710,7 +9710,7 @@ testcafe-reporter-xunit@^2.1.0:
   resolved "https://registry.yarnpkg.com/testcafe-reporter-xunit/-/testcafe-reporter-xunit-2.1.0.tgz#e6d66c572ce15af266706af0fd610b2a841dd443"
   integrity sha1-5tZsVyzhWvJmcGrw/WELKoQd1EM=
 
-testcafe@^1.7.1:
+testcafe@1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/testcafe/-/testcafe-1.7.1.tgz#10112f3bfdab0d3c3088273e3ccedb63ec5754e1"
   integrity sha512-mLouX1NkfbOsFuXL4gCTpK06qfuoYyVLWc5ZuvRaXT+UyzG39uLL6QqoxZlCA/2e9xHerrGCr9qOLitvxuk08Q==
