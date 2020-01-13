@@ -1169,10 +1169,10 @@
     source-map "~0.6.1"
     vue-template-es2015-compiler "^1.9.0"
 
-"@vue/eslint-config-airbnb@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@vue/eslint-config-airbnb/-/eslint-config-airbnb-5.0.0.tgz#92f6e42014c7024b9a7af0fcc1c52635b7d6bdc3"
-  integrity sha512-Iyx3t3sTbx96MKrKFo+nEajouQs9Y+y4oGiQt2ZC31+/0WuYW4aAt/VA9+asvTbFAc256x6zWRHH1htBpiqOeA==
+"@vue/eslint-config-airbnb@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@vue/eslint-config-airbnb/-/eslint-config-airbnb-5.0.1.tgz#d58c0dc6ab4d814b054af9288b02a2f3040d912e"
+  integrity sha512-arrzedZ3pe1qwapzy2zAf51BEFxo20xDJfLNcZELQSrpOBGG+3JCdffHciAfXI2FdzY1LesyIiu6yCs67a03VQ==
   dependencies:
     eslint-config-airbnb-base "^14.0.0"
     eslint-import-resolver-webpack "^0.11.1"
