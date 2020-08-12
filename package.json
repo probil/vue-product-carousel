@@ -38,7 +38,7 @@
     "eslint-plugin-vue": "6.2.2",
     "skeleton": "git://github.com/dhg/Skeleton.git",
     "start-server-and-test": "1.11.3",
-    "testcafe": "1.9.0",
+    "testcafe": "1.9.1",
     "vue": "2.6.11",
     "vue-template-compiler": "2.6.11"
   },
