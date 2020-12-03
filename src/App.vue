@@ -78,11 +78,11 @@ export default {
     return {
       new_image: '',
       images: [
-        'http://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_2588/v1473457885/person-hand-smartphone-technology_w0bgpf.jpg',
-        'http://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_2588/v1473457888/pexels-photo-168766_zrbvds.jpg',
-        'http://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_2588/v1473457886/pexels-photo_f5vx33.jpg',
-        'http://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_2588/v1473457886/person-smartphone-office-table_ttiwjx.jpg',
-        'http://res.cloudinary.com/dxn1bjdta/image/upload/v1473457881/pexels-photo-89955_ifoijg.jpg',
+        'https://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_3000,f_auto/v1606989818/vue-product-carousel/nike.jpg',
+        'https://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_3000,f_auto/v1606990043/vue-product-carousel/camera-on-tripod.jpg',
+        'https://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_3000,f_auto/v1606990558/vue-product-carousel/t-shirt.jpg',
+        'https://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_3000,f_auto/v1606989636/vue-product-carousel/brett-jordan-1dsceUpkOwI-unsplash.jpg',
+        'https://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_3000,f_auto/v1606992381/vue-product-carousel/PH167110.jpg',
       ],
     };
   },

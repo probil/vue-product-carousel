@@ -9,7 +9,7 @@ test('Remove element', async (t) => {
     .click(Selector('.three.columns').find('button').withText('X'))
     .expect(Selector('.vue-product-carousel .swipe-wrap>div').count).eql(4, 'Removes preview')
     .expect(Selector('.main-image.responsive-image').getStyleProperty('background-image'))
-    .contains('http://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_2588/v1473457888/pexels-photo-168766_zrbvds.jpg');
+    .contains('https://res.cloudinary.com/dxn1bjdta/image/upload/c_scale,w_3000,f_auto/v1606990043/vue-product-carousel/camera-on-tripod.jpg');
 });
 
 test('Add element', async (t) => {
