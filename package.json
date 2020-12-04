@@ -35,7 +35,7 @@
     "core-js": "3.8.0",
     "eslint": "7.14.0",
     "eslint-plugin-testcafe": "0.2.1",
-    "eslint-plugin-vue": "7.1.0",
+    "eslint-plugin-vue": "7.2.0",
     "skeleton": "git://github.com/dhg/Skeleton.git",
     "start-server-and-test": "1.11.6",
     "testcafe": "1.9.4",
