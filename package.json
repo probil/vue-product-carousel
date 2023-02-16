@@ -47,5 +47,6 @@
       "type": "MIT",
       "url": "https://github.com/probil/vue-product-carousel/blob/master/LICENSE"
     }
-  ]
+  ],
+  "dependencies": {}
 }
