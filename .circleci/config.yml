@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.1.0
 jobs:
   build:
     docker:
@@ -11,6 +13,7 @@ jobs:
 
     steps:
       - checkout
+      - browser-tools/install-browser-tools
 
       # Download and cache dependencies
       - restore_cache:
