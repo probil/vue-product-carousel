@@ -13,6 +13,7 @@ jobs:
 
     steps:
       - checkout
+
       - browser-tools/install-browser-tools
 
       # Download and cache dependencies
