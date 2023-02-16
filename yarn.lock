@@ -10297,9 +10297,9 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-"skeleton@git://github.com/dhg/Skeleton.git":
+"skeleton@https://github.com/dhg/Skeleton.git#2.0.4":
   version "0.0.0"
-  resolved "git://github.com/dhg/Skeleton.git#88f03612b05f093e3f235ced77cf89d3a8fcf846"
+  resolved "https://github.com/dhg/Skeleton.git#88f03612b05f093e3f235ced77cf89d3a8fcf846"
 
 slash@^1.0.0:
   version "1.0.0"
