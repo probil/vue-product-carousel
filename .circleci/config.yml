@@ -3,6 +3,9 @@ jobs:
   build:
     docker:
       - image: cimg/node:lts-browsers
+    environment:
+      # TODO: remove after proper node 18 migration
+      NODE_OPTIONS: --openssl-legacy-provider
 
     working_directory: ~/repo
 
