@@ -1,13 +1,20 @@
-version: 2
+version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.1.0
 jobs:
   build:
     docker:
-      - image: circleci/node:lts-browsers
+      - image: cimg/node:lts-browsers
+    environment:
+      # TODO: remove after proper node 18 migration
+      NODE_OPTIONS: --openssl-legacy-provider
 
     working_directory: ~/repo
 
     steps:
       - checkout
+
+      - browser-tools/install-browser-tools
 
       # Download and cache dependencies
       - restore_cache:
