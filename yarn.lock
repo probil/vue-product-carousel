@@ -8869,6 +8869,7 @@ sisteransi@^1.0.5:
 
 "skeleton@https://github.com/dhg/Skeleton.git#2.0.4":
   version "0.0.0"
+  uid "88f03612b05f093e3f235ced77cf89d3a8fcf846"
   resolved "https://github.com/dhg/Skeleton.git#88f03612b05f093e3f235ced77cf89d3a8fcf846"
 
 slash@^1.0.0:
