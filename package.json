@@ -50,6 +50,6 @@
   ],
   "dependencies": {},
   "resolutions": {
-    "@achrinza/node-ipc": "10.1.7"
+    "@achrinza/node-ipc": "10.1.8"
   }
 }

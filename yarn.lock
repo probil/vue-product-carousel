@@ -9,10 +9,10 @@
   dependencies:
     "@achrinza/strong-type" "0.1.10"
 
-"@achrinza/node-ipc@10.1.7", "@achrinza/node-ipc@9.2.2":
-  version "10.1.7"
-  resolved "https://registry.yarnpkg.com/@achrinza/node-ipc/-/node-ipc-10.1.7.tgz#0e2d5a69a117dd8ea1294fb04c476dc3f49a1cf0"
-  integrity sha512-xuSoaImTsihgO7pM+R6J61/AMBA9v+rJIGax1g/T16GKa8TO/cuuDXZA4ZN6q0zdUuUeCXIac9UPQZw8ofKBzQ==
+"@achrinza/node-ipc@10.1.8", "@achrinza/node-ipc@9.2.2":
+  version "10.1.8"
+  resolved "https://registry.yarnpkg.com/@achrinza/node-ipc/-/node-ipc-10.1.8.tgz#a62a281eac6276637728d9fc37aba7729e6acd41"
+  integrity sha512-K33QLg4EkQp+Eomg45/fokOlSSgnu7Mt+hZTS9Zql3pWkZpnQIWA7riZGFPpQOmnHsICUBTbSESLtVTq4/60lQ==
   dependencies:
     "@achrinza/event-pubsub" "5.0.8"
     "@node-ipc/js-queue" "2.0.3"
