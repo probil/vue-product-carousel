@@ -24,7 +24,7 @@
     "dist/lib"
   ],
   "peerDependencies": {
-    "vue": "~2"
+    "vue": "~2 || ~3.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "4.5.19",
@@ -39,7 +39,7 @@
     "skeleton": "https://github.com/dhg/Skeleton.git#2.0.4",
     "start-server-and-test": "2.0.8",
     "testcafe": "3.6.2",
-    "vue": "2.7.16",
+    "vue": "3.5.12",
     "vue-template-compiler": "2.7.16"
   },
   "licenses": [
