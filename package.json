@@ -39,7 +39,7 @@
     "skeleton": "https://github.com/dhg/Skeleton.git#2.0.4",
     "start-server-and-test": "2.0.9",
     "testcafe": "3.7.0",
-    "vue": "2.7.16",
+    "vue": "3.0.0",
     "vue-template-compiler": "2.7.16"
   },
   "licenses": [
