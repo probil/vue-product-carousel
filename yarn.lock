@@ -5631,10 +5631,10 @@ esotope-hammerhead@0.6.3:
   dependencies:
     "@types/estree" "0.0.46"
 
-esotope-hammerhead@0.6.8:
-  version "0.6.8"
-  resolved "https://registry.yarnpkg.com/esotope-hammerhead/-/esotope-hammerhead-0.6.8.tgz#98f3dbf533e859de8d54e5bab4a930214f505810"
-  integrity sha512-2Zhg0c6NfrNA4QT5s4+QG5WJQtq3Se7GonNwtNwfr7sVIo/7L8rirPfh9yyloEmDA7R0yPgD10teFxhf2vWyIw==
+esotope-hammerhead@0.6.9:
+  version "0.6.9"
+  resolved "https://registry.yarnpkg.com/esotope-hammerhead/-/esotope-hammerhead-0.6.9.tgz#affb914c913b0c46a216ab104229353235dd523e"
+  integrity sha512-rD9Jbh0SFJzKe1RGfsbwpN5IBdubHKC61xRW7A5BPgBTtEnFxsWOqPITVhBaVDc4r5VPmh+Y1U1wmqReTfn1AQ==
   dependencies:
     "@types/estree" "0.0.46"
 
@@ -7861,6 +7861,11 @@ lower-case@^1.1.1:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/lower-case/-/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
   integrity sha512-2Fgx1Ycm599x+WGpIYwJOvsjmXFzTSc34IwDWALRA/8AopUKAVPwfJ+h5+f85BCp0PWmmJcWzEpxOpoXycMpdA==
+
+lru-cache@11.0.2:
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-11.0.2.tgz#fbd8e7cf8211f5e7e5d91905c415a3f55755ca39"
+  integrity sha512-123qHRfJBmo2jXDbo/a5YOQrJoHF/GNQTLzQ5+IdK5pWpceK17yRc6ozlWd25FxvGKQbIUs91fDFkXmDHTKcyA==
 
 lru-cache@2.6.3:
   version "2.6.3"
@@ -10758,10 +10763,10 @@ testcafe-browser-tools@2.0.26:
     read-file-relative "^1.2.0"
     which-promise "^1.0.0"
 
-testcafe-hammerhead@31.7.4:
-  version "31.7.4"
-  resolved "https://registry.yarnpkg.com/testcafe-hammerhead/-/testcafe-hammerhead-31.7.4.tgz#d76c144a32cfb2a35a768ecc0a90ecc5ced180bf"
-  integrity sha512-cTBLS4pDGTJpGoLI9TBuB/TfmVuawSss4PRqxfa2MhvD2QVnLgOlQ/ODNZcYJXaeJKrmlSoSlF6uSt5lif00Uw==
+testcafe-hammerhead@31.7.5:
+  version "31.7.5"
+  resolved "https://registry.yarnpkg.com/testcafe-hammerhead/-/testcafe-hammerhead-31.7.5.tgz#dcdfe920a1d9dbaafdf28f130a8e64fb9981df11"
+  integrity sha512-XnDtvrpiwoxMPhC9A3eFOPeE0erDF0iae5t23yaYB4lVQCRuEoNfg5Lv4vGvDhbJ2n2fpzOre4Lhvz12mac0tw==
   dependencies:
     "@adobe/css-tools" "^4.3.0-rc.1"
     "@electron/asar" "^3.2.3"
@@ -10769,12 +10774,12 @@ testcafe-hammerhead@31.7.4:
     bowser "1.6.0"
     crypto-md5 "^1.0.0"
     debug "4.3.1"
-    esotope-hammerhead "0.6.8"
+    esotope-hammerhead "0.6.9"
     http-cache-semantics "^4.1.0"
     httpntlm "^1.8.10"
     iconv-lite "0.5.1"
     lodash "^4.17.21"
-    lru-cache "2.6.3"
+    lru-cache "11.0.2"
     match-url-wildcard "0.0.4"
     merge-stream "^1.0.1"
     mime "~1.4.1"
@@ -10868,10 +10873,10 @@ testcafe-selector-generator@^0.1.0:
   resolved "https://registry.yarnpkg.com/testcafe-selector-generator/-/testcafe-selector-generator-0.1.0.tgz#852c86f71565e5d9320da625c2260d040cbed786"
   integrity sha512-MTw+RigHsEYmFgzUFNErDxui1nTYUk6nm2bmfacQiKPdhJ9AHW/wue4J/l44mhN8x3E8NgOUkHHOI+1TDFXiLQ==
 
-testcafe@3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/testcafe/-/testcafe-3.7.1.tgz#c75b3839e708cd86c214d6ff1122e4019bc3b3d6"
-  integrity sha512-Nz7lnGPsbocm7+iNMxEfoDNQyi2rovJv0g7TXzhJfKt7WMJXMT3OyQza2g9AbICee29GenzKtzt3JhUsyIiOug==
+testcafe@3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/testcafe/-/testcafe-3.7.2.tgz#c82d51ca064df969c05e22ee8c897afe4a3fed9a"
+  integrity sha512-1XNc764DlIfmev7JHwzVP2l7ZHQin9nTsM9fBB0yd3naAJn+VUR9kUe7J1PSxk+nJkhkBvsSmQSlppj527JGAA==
   dependencies:
     "@babel/core" "^7.23.2"
     "@babel/plugin-proposal-decorators" "^7.23.2"
@@ -10956,7 +10961,7 @@ testcafe@3.7.1:
     source-map-support "^0.5.16"
     strip-bom "^2.0.0"
     testcafe-browser-tools "2.0.26"
-    testcafe-hammerhead "31.7.4"
+    testcafe-hammerhead "31.7.5"
     testcafe-legacy-api "5.1.8"
     testcafe-reporter-json "^2.1.0"
     testcafe-reporter-list "^2.2.0"
